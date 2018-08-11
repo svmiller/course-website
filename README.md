@@ -10,6 +10,6 @@ Here are the things you should tweak to make it your own:
 - `index.html`: You won't need to edit much but, if you want your own lead image for your course website that's *not* from *Stand and Deliver* (I don't know why you would do this, but, hey, it's your class...), edit that Jekyll liquid tag I created that embeds images in my spiffy way. This should be intuitive. Just specify a relative path for the image you want to use, how wide you want it to be, and whatever caption you want to add to it.
 - `_data/lectures.yml`: This uses YAML data to render Github and local links to lectures. This should be intuitive (see my example file). You could also edit `lectures.md` if, for example, you render your lectures to HTML in lieu of PDF. I do PDF. Changing this isn't hard, though, and should be straightforward.
 
-![Snapshot](_images/snapshot.jpg)
+![Snapshot](_images/snapshot.png)
 
 Feel free to contact me at svmille@clemson.edu. Send along some cheers too if you find it useful.
