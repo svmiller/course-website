@@ -31,9 +31,9 @@ This page contains link to the lectures I give throughout the semester. Clicking
 <span class = "postlower">
 <strong>tl;dr:</strong> {{ lectures.tldr }}</span>
 <strong style="font-size:100%; font-family: 'Titillium Web', sans-serif; float:right">
-	<a href="{{ site.githublink}}/tree/master/{{ lectures.dirname }}"><i class="fab fa-github"></i></a>&nbsp;&nbsp;
-<a href="{{ site.githublink}}/tree/master/{{ lectures.dirname }}/{{ lectures.filename}}.Rmd"><i class="fab fa-r-project"></i></a>&nbsp;&nbsp;
-<a href="{{ site.githublink}}/blob/master/{{ lectures.dirname }}/{{ lectures.filename}}.pdf"><i class="fas fa-file-pdf"></i></a>
+	<a href="https://github.com/{{ site.githubdir}}/tree/master/{{ lectures.dirname }}"><i class="fab fa-github"></i></a>&nbsp;&nbsp;
+<a href="https://github.com/{{ site.githubdir}}/tree/master/{{ lectures.dirname }}/{{ lectures.filename}}.Rmd"><i class="fab fa-r-project"></i></a>&nbsp;&nbsp;
+<a href="https://github.com/{{ site.githubdir}}/blob/master/{{ lectures.dirname }}/{{ lectures.filename}}.pdf"><i class="fas fa-file-pdf"></i></a>
 </strong> 
       </li>
 {% endfor %}
