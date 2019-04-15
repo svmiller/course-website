@@ -3,6 +3,91 @@ Steve's No-Good-Very-Bad Course Website Jekyll Template
 
 This repository contains a Jekyll template, patterned entirely off my no-good-very-bad Jekyll Template at [svmiller.com](http://svmiller.com), for organizing a course website. I should note that because I ganked it from my website template, there's a lot of empty tags in the template that make reference to things that don't appear in the main `.yml` file. In other words, they reference things that should be there but, because they're not there, ultimately won't interfere with how the site renders.
 
+
+## Installation
+
+This assumes that you have a working installation of Jekyll. If you don't, first visit [Jekyll's documentation](https://jekyllrb.com/docs/installation/) to learn how to. 
+
+1. [Fork this repo](https://github.com/svmiller/course-website) and clone it locally.
+
+```bash
+cd ~/Sites/
+
+git clone https://github.com/YOUR_USER_NAME/course-website.git
+
+```
+
+2. Create a new empty theme with Jekyll
+
+```bash
+cd ~/Sites/
+
+jekyll new-theme ipa
+
+             create ~/Sites/ipa/assets
+             create ~/Sites/ipa/_layouts
+             create ~/Sites/ipa/_includes
+             create ~/Sites/ipa/_sass
+             create ~/Sites/ipa/_layouts/page.html
+             create ~/Sites/ipa/_layouts/post.html
+             create ~/Sites/ipa/_layouts/default.html
+             create ~/Sites/ipa/Gemfile
+             create ~/Sites/ipa/ipa.gemspec
+             create ~/Sites/ipa/README.md
+             create ~/Sites/ipa/LICENSE.txt
+         initialize ~/Sites/ipa/.git
+             create ~/Sites/ipa/.gitignore
+Your new Jekyll theme, ipa, is ready for you in ~/Sites/ipa! 
+For help getting started, read ~/Sites/ipa/README.md. 
+
+
+```
+
+3. Open the ``ipa.gemspec`` file and edit it as follows:
+
+```bash
+  spec.summary	=	"WRITE A SHORT SUMMARY OF YOUR THEME"
+  spec.homepage	=	"http://address.com"
+
+### Update the following two version numbers as per what's on your system.
+  spec.add_development_dependency "bundler", "~> 2.0.1"
+  spec.add_development_dependency "rake", "~> 12.3.2"
+
+``` 
+
+4. Run ``bundle install`` inside ``~/Sites/ipa/``.  This should run successfully and install all the necessary gems.  It will also create a ``Gemfile`` and a ``Gemfile.lock`` inside your project.
+
+5. Now we are ready to migrate necessary theme files from ``~/Sites/course-website/`` to ``~/Sites/ipa/``.  Copy the following files and folders.  If a folder already exists (e.g. ``_includes``), just copy files inside. If a file already exists, overwrite it.
+
+```bash
+_config.yml
+_css/
+_data/
+_images/
+_includes/
+_layouts/
+_posts/
+_sass/
+_site/
+assets/
+blog.md
+CNAME
+course-materials.md
+feed.xml
+index.html
+lectures.md
+LICENSE.txt
+README.md
+sitemap.xml
+syllabus/
+untitled-lecture/
+
+```
+
+6. Edit ``_config.yml`` to customize site details.  Then fire up ``jekyll serve``.  You may need to do ``bundle exec jekyll serve`` instead, if you have a separate Ruby installation for Jekyll's purposes.  The site template should be only at ``http://localhost:4000`` now. 
+
+7. Follow the remaining directions below to fully customize your site.
+
 Here are the things you should tweak to make it your own:
 
 - `_config.yml`. Naturally. This should be familiar if you're accustomed to Jekyll. Do note, for convenience, that I made the `syllabus` field a full URL entry. You should also fill out the `githubdir` field since the goal is to make your course (and, by extension, the knowledge you propose to communicate) open source and reproducible on Github. Let us know where it is.
