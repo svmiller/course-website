@@ -268,8 +268,11 @@ ul#archive li {
        border-top: #999 1px dotted;
        border-bottom: #999 1px dotted;
        padding: .1em 0 .1em .5em;
-       background: #fff;
 }
+
+ul#archive li:nth-child(even) { background: #f3f3f3; }
+ul#archive li:nth-child(odd) { background: #fdfdfd; }
+
 
 ul#archive  h2 {
 	padding-top: .5em }
